@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Prediction</title>
+    <style>
+        body {
+            background-color: #27ae60;
+            background-image: url('your-image-url.jpg');  /* Replace 'your-image-url.jpg' with your actual image URL */
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: aqua;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #2c3e50;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        h1 {
+            color: red;
+        }
+
+        p {
+            color: #555;
+        }
+
+        p img {
+            max-width: 50%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 15px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        button {
+            background-color: red;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        center {
+            display: block;
+            text-align: center;
+            font-size: large;
+            font-weight: bolder;
+        }
+        label {
+        font-weight: bold;
+        color: #333; 
+    }
+
+    input[type="text"] {
+        width: 200px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DISEASE PREDICTION</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="doctor.html">Predict</a>
+        <a href="symptoms.html">About Model</a>
+        <a href="#">Testimonals</a>
+        <a href="#">FAQ</a>
+        <a href="contact.html">Contact</a> 
+    </nav>
+
+    <p><center><big><big><big><big> Wekcome to Disease Prediction Using Machine Learning.</big></big></big></big>
+       
+<br>
+        We will help you predict the disease you might be having using the symptoms given as input.
+    </center></p>
+    <p><img src="data:image/jpeg;base64,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" alt="Image"></p>
+    
+    
+   <a href="doctor.html"> <button id="predictButton">Predict</button></a>
+
+</body>
+</html>
